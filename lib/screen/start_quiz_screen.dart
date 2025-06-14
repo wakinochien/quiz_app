@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/start_quiz_body_container.dart';
+import 'package:quiz_app/screen/start_quiz_body_container.dart';
 
 class StartQuizScreen extends StatefulWidget {
   const StartQuizScreen({super.key});
