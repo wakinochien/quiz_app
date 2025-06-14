@@ -1,16 +1,28 @@
-# quiz_app
+# ❓ quiz_app
 
-A new Flutter project.
+A simple Flutter project that displays a multiple-choice quiz with shuffled questions.
 
-## Getting Started
+## ✨ Features
 
-This project is a starting point for a Flutter application.
+- 📋 **Multiple Choice Questions**: Engaging quiz interface with selectable answer options.
+- 🔀 **Shuffled Questions**: Each quiz session presents the questions in a randomized order.
+- 🧩 **Score Tracking**: Tracks user score as they progress through the quiz.
+- 📱 **Responsive Layout**: Optimized for various screen sizes with clean UI.
 
-A few resources to get you started if this is your first Flutter project:
+## 📸 Preview
+<img src="assets/preview/quiz_app_preview1.png" width="200" height="480" />
+<img src="assets/preview/quiz_app_preview2.png" width="200" height="480" />
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🚀 Getting Started
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Prerequisites
+
+- Flutter SDK installed
+- Dart enabled
+- An IDE like Android Studio, VSCode, etc.
+
+### Run the app
+
+```bash
+flutter pub get
+flutter run
