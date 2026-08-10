@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/screen/start_quiz_screen.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -11,6 +10,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  StartQuizScreen();
+    return MaterialApp(
+      title: 'Quiz App',
+      debugShowCheckedModeBanner: false,
+      home: const StartQuizScreen(),
+    );
   }
 }

@@ -8,7 +8,7 @@ class AnswerButton extends StatelessWidget {
   final void Function()? onTap;
 
   @override
-  Widget build(context) {
+  Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -16,7 +16,7 @@ class AnswerButton extends StatelessWidget {
         ElevatedButton(
           onPressed: onTap,
           style: ElevatedButton.styleFrom(
-            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
             backgroundColor: const Color.fromARGB(255, 33, 37, 45),
             foregroundColor: Colors.white,
             shape: RoundedRectangleBorder(

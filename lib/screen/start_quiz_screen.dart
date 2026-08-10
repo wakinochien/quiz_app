@@ -1,17 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/screen/start_quiz_body_container.dart';
+import 'package:quiz_app/screen/gradient_background.dart';
+import 'package:quiz_app/screen/question_screen.dart';
+import 'package:quiz_app/screen/start_quiz_content.dart';
 
-class StartQuizScreen extends StatefulWidget {
+class StartQuizScreen extends StatelessWidget {
   const StartQuizScreen({super.key});
-  @override
-  State<StartQuizScreen> createState() {
-    return _StartQuizScreenState();
-  }
-}
 
-class _StartQuizScreenState extends State<StartQuizScreen> {
+  void _startQuiz(BuildContext context, String playerName) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => QuestionScreen(playerName: playerName),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Scaffold(body: StartQuizBodyContainer()));
+    return Scaffold(
+      body: GradientBackground(
+        child: StartQuizContent(
+          (playerName) => _startQuiz(context, playerName),
+        ),
+      ),
+    );
   }
 }
