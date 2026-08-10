@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quiz_app/models/quiz_questions.dart';
 import 'package:quiz_app/models/quiz_summary_item.dart';
-import 'package:quiz_app/models/sample_question.dart';
 import 'package:quiz_app/screen/gradient_background.dart';
 import 'package:quiz_app/screen/quiz_summary/question_summary.dart';
 
@@ -9,10 +9,12 @@ class ResultsScreen extends StatelessWidget {
   const ResultsScreen({
     super.key,
     required this.playerName,
+    required this.questions,
     required this.selectedAnswers,
   });
 
   final String playerName;
+  final List<QuizQuestion> questions;
   final List<String> selectedAnswers;
 
   List<QuizSummaryItem> get summaryData {
@@ -21,7 +23,7 @@ class ResultsScreen extends StatelessWidget {
         QuizSummaryItem(
           questionIndex: i,
           question: questions[i].text,
-          correctAnswer: questions[i].answers[0],
+          correctAnswer: questions[i].correctAnswer,
           userAnswer: selectedAnswers[i],
         ),
     ];
